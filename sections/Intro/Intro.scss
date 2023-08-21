@@ -1,0 +1,48 @@
+#introduction{
+    
+    .intro-container{
+        padding: 5em 2em;
+        @include flex(center,space-evenly,none);
+        flex-wrap: wrap;
+        width: 100%;
+        .intro-card{
+            text-align: center;
+            padding: 4.5em 0.5em ;
+            width: 20em;
+            line-height: 25px;
+            margin: 1rem 1.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(0,0,0,0.2);
+            background-color: rgba(216,232,242,0.2);
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    #introduction{
+        .intro-container{
+            .intro-card{
+            }
+           
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    #introduction{
+        .intro-container{
+           
+            .intro-card{
+                width: 19em;
+            }
+        }
+    }
+}
+@media screen and (max-width: 640px) {
+    #introduction{
+        .intro-container{
+            padding: 5em 1em;
+            .intro-card{
+                margin: 1rem 0;
+            }
+        }
+    }
+}

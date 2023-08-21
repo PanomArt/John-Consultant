@@ -1,0 +1,103 @@
+.profile{
+    margin-top: 10em;
+    .profile-content{
+        width: 100%;
+        padding: 5% 5%;
+        @include grid(repeat(2,1fr),20px);
+        .content-left{
+            padding: 2.5em;
+            .content-text{
+                margin: 0 auto;      
+                width: 24.5em;
+                .profile-paragraph{
+                    margin: 2em 0;
+                    line-height: 1.7em;
+                }
+            }
+        }
+        .content-right{
+            width: 100%;
+            height: 35em;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+.team{
+     .team-title{
+        margin: 12em auto 5em auto;
+        text-align: center;
+        width: 20em;
+     }
+     .team-content{
+        @include grid(repeat(2, 1fr),20px);
+        margin-bottom: 10em;
+        justify-items: center;
+        padding: 5% 10%;
+        .content{
+            width: 25em;
+            padding: 2em 0 3.5em 0;
+            .team-img{
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .team-details{
+                margin: 2em 0 ;
+                .name{
+                    font-family: 'Brandon Grotesque Light', sans-serif;
+                    text-transform: uppercase;
+                    font-size: 28px;
+                    margin-bottom: 0.5em;
+                }
+                .depart{
+                    font-size: 18px;
+                    font-family: 'Avenir Light', sans-serif;
+                    font-weight: bolder;
+                    letter-spacing: 0.3px;
+                }
+                .description{
+                    margin-top: 2em;
+                    line-height: 1.8em;
+                }
+            }
+            
+        }
+     }
+}
+@media screen and (max-width: 992px) {
+    .profile{
+        .profile-content{
+            width: 100%;
+            padding: 5% 5%;
+            @include flex(center,none,column);
+               .content-left{
+                    .content-text{
+                        width: 100%
+                    }
+               }
+               .content-right{
+                    height: 25em;
+                    padding: 0;
+               }
+        }
+    }
+    .team{
+         .team-content{
+             @include flex(center,none,column);
+         }
+    }
+}
+@media screen and (max-width:480px) {
+    .team{
+        .team-content{
+            .content{
+                width: 20em;
+            }
+        }
+    }
+}

@@ -1,0 +1,289 @@
+.tools-and-tips-maindiv{
+    width: 100%;
+      .title{
+        margin-top: 8em;
+        &-description{
+            font-family: 'Avenir Light', sans-serif;
+            font-size: 16px;
+            color: black;
+            text-transform: none;
+            width: 42em;
+            text-align: center;
+            margin: 0 auto;
+            line-height: 30px;
+        } 
+      }
+      .table-container{
+        margin: 7.5em auto;
+        width: 60em;
+        .file-table-header{
+            border-bottom : 1px solid $bordercardcolor;
+            .table-title{
+                height: 2.5em;
+                @include flex(center,space-between,none);
+               .right-header{
+                    .search-icon{
+                        position: relative;
+                        margin: 0 2em;
+                        cursor: pointer;
+                        font-size: 14px;
+                    }
+                    .addfiles-btn{
+                        width: 130px;
+                        border: 1px solid $buttoncolor;
+                        padding: 10px;
+                        color: $white;
+                        font-family: 'Avenir Heavy', sans-serif;
+                        font-weight: bolder;
+                        font-size: 15px;
+                        background: $layoutbg;
+                        cursor: pointer;
+                        transition: 0.3s ease-in-out;
+                          &:hover{
+                              opacity: 0.7;
+                           }
+                    }
+                    .download{
+                        cursor: pointer;
+                        font-family: 'Avenir Light', sans-serif;
+                        font-size: 16px;
+                        background: transparent;
+                        border: none;
+                        .download-icon{
+                            opacity: 0.7;
+                            position: relative;
+                            top: 2.5px;
+                            font-size: 20px;
+                            margin-right: 0.5em;
+                        }
+                        &:hover{
+                            opacity: 0.5;
+                        }
+                    }
+                    .mobileview-select-btn{
+                        display: none;
+                        font-size: 24px;
+                    }
+              }
+            }
+            .header-row{
+                margin: 1.5em 0;
+                @include flex(center,none,none);
+                &:hover{
+                    .header-checkbox{
+                       opacity: 1 ;
+                    }
+                }
+                .header-checkbox{
+                    top: -8px;
+                    opacity: 0;
+                   @include checkbox();
+                }
+                .header-item-name{
+                    margin: 0 20em 0 2em;
+                }
+                .header-row-right{
+                    @include flex(none,space-between,none);
+                    p{
+                        margin: 0 1.5em;
+                    }
+                    button{
+                         background: transparent;
+                         border: none;
+                         opacity: 0.6;
+                         cursor: pointer;
+                            &:hover{
+                             opacity: 0.2;
+                            }
+                        }
+                }
+                .mobile-addfile-btn{
+                     display: none;
+                     position: relative;
+                     height: 40px;
+                     border-radius: 50%;
+                     width: 40px;
+                     border: none;
+                     background: $layoutbg;
+                     cursor: pointer;
+                       span{
+                            top: 1.5px;
+                            left: 0px;
+                            position: relative;
+                            font-size: 21px;
+                            color: white;
+                       }
+                }  
+            }
+        }
+        .data-row-container{
+            padding: 1.5em 0;
+            border-bottom : 1px solid $bordercardcolor;
+            &:hover{ 
+                background: rgba(199, 199, 199,0.2);
+                 .data-checkbox{
+                 opacity: 1;
+                 }
+            }
+             .data-checkbox{
+                margin: 0 1em;
+                opacity: 0;
+                position: relative;
+                top: 25px;
+                @include checkbox();
+             }
+             .item-title{
+                margin-left: 3em;
+                @include flex(center,none,none);
+                .folder-icon{
+                    font-size: 50px;
+                }
+                .item-name{
+                   width: 20.2em;
+                   line-height: 2em; 
+                   margin: 0 2.2em 0 2em;
+                   .mobileview-details{
+                      display: none;
+                   }
+                }
+                .value{
+                    width: 28em;
+                    @include flex(none,none,none);
+                    .update{
+                        width: 7em;
+                        margin-right: 2em;
+                    }
+                    .view{
+                        width: 3em;
+                        margin-right: 3.0em;
+                    }
+                    .favorite{
+                        width: 4em;
+                        margin-right: 2.0em;
+                    }
+                    .contributor{
+                        width: 5em;
+                        margin-right: 1em;
+                    }
+                    .value-menu{
+                        cursor: pointer;
+                        width: 1.5em;
+                        border: none;
+                        background-color: transparent;
+                    }
+                }
+             }
+        }
+      }
+}
+@media screen and (max-width: 992px) {
+    .tools-and-tips-maindiv{
+        .table-container{
+            width: 45em;
+            .file-table-header{
+                .header-row{
+                    .header-item-name{
+                        margin: 0 8.5em 0 1.5em;
+                    }
+                    .header-row-right{
+                        p{
+                            margin: 0 1.1em;
+                        }
+                    }
+                }
+            }
+            .data-row-container{
+                .data-checkbox{
+                    margin: 0;
+                }
+                .item-title{
+                    margin-left: 1.2em;
+                    .item-name{
+                        margin: 0 1.5em
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .tools-and-tips-maindiv{
+          .title{
+            p{
+                width: 85%;
+            }
+          }
+          .table-container{
+            width: 80%;
+               .table-title{
+                     .right-header{
+
+                            .search{
+                                  @include flex(center,none,none);
+                                  .search-icon{
+                                       position: relative;
+                                       font-size: 20px;
+                                  }
+                                  .addfiles-btn{
+                                       display: none;
+                                  }
+                                  .mobileview-select-btn{
+                                    display: block;
+                                    
+                                  }
+                            }
+
+            
+
+
+                     }
+               }
+               .header-row{
+                     justify-content: space-between;
+                    .header-checkbox{
+                        display: none !important;
+                    } 
+                    .header-item-name{
+                        position: relative;
+                        left: 0;
+                    } 
+                    .header-row-right{
+                         display: none !important;
+                    }
+                    .mobile-addfile-btn{
+                         position: relative;
+                         display: block !important;
+                    }
+               }
+               .data-row-container{
+                    label{
+                        display: none !important;
+                    }
+                   .item-title{
+                        @include flex(center,space-between,none);
+                        margin-right: 5em;
+                        position: relative;
+                        .folder-icon{
+                        position: absolute;
+                        font-size: 25px;
+                        bottom: 0;
+                        left: 0.9em;
+                        }
+                        .item-name{
+                            line-height: 24px;
+                            .mobileview-details{
+                                display: flex;
+                            }
+                            .item{
+                                display: flex;
+                                margin: 10px 0 0 30px ;
+                            }
+                        }
+                   } 
+                   .value{
+                        display: none !important;
+                   }
+               }
+          }
+    }
+}

@@ -1,0 +1,46 @@
+.projects-maindiv{
+    margin-top: 10em;
+    .projects-container{
+        @include grid(repeat(2, 1fr), 30px);
+        justify-content: center;
+        margin-top: 5em;
+        padding: 2em 15em;
+        .content{
+            width: 28em;
+            margin: 0 auto 5em auto;
+            padding: 2em auto;
+            img{
+                width: 100%;      
+            }
+            h2{
+                text-align: left;
+                margin: 0.9em 0 0.5em 0;
+            }
+            .project-desc{
+                line-height: 1.8em;
+            }
+        }
+    }
+}
+@media screen and (max-width:950px){
+    .projects-maindiv{
+        .projects-container{
+            padding: 0 8%; 
+             @include flex(center,none,column);
+              .content{
+                width: 26em;
+              }
+        }
+    }
+}
+@media screen and (max-width:640px){
+    .projects-maindiv{
+        .projects-container{
+            padding: 0 8%; 
+             @include flex(center,none,column);
+              .content{
+                width: 18em;
+              }
+        }
+    }
+}

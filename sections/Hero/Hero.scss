@@ -1,0 +1,69 @@
+#hero{
+    height: 47.5em;
+    @include flex(flex-end,center,none);
+    overflow: hidden;
+    .hero-background{
+        content: "";
+        background: url("../../public/hero.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        left: 100px;
+        z-index: -1;
+    } 
+    .hero-title{
+
+        margin-bottom: 0px;
+        padding: 20px 0 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 830px;
+        height: 250px;
+        background: $white;
+        position: absolute;
+        z-index: 0;
+    }
+}
+@media screen and (max-width: 1200px) {
+    #hero{
+        .hero-title{
+            width: 700px;
+            .title-small{
+                font-size: 23px;
+            }
+            .title-large{
+                font-size: 54px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    #hero{
+        .hero-title{
+            width: 600px;
+            .title-small{
+                font-size: 20px;
+            }
+            .title-large{
+                font-size: 48px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 640px) {
+    #hero{
+        .hero-title{
+            width: 80%;
+            .title-small{
+                font-size: 18px;
+            }
+            .title-large{
+                font-size: 40px;
+            }
+        }
+    }
+}

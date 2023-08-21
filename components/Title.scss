@@ -1,0 +1,24 @@
+@import url('https://fonts.cdnfonts.com/css/brandon-grotesque-regular');
+.title-small{
+    font-family: 'Brandon Grotesque Light', sans-serif;
+    font-size: 26px;
+}                
+.title-large{
+    color: $titlecolor;
+    font-family: 'Brandon Grotesque Light', sans-serif;
+    font-size: 60px;
+    text-align: center;
+}
+.title-section{
+    color: $titlecolor;
+    font-family: 'Brandon Grotesque Light', sans-serif;
+    text-transform: uppercase;
+    font-size: 36px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+@media screen and (max-width: 480px) {
+    .title-large{  
+        font-size: 48px;
+    }
+}

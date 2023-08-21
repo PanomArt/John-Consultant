@@ -1,0 +1,93 @@
+#testimonial{
+      min-height: 38em;
+      background-color: rgb(247,247,247);
+      text-align: center;
+      .container{
+          padding: 7em 0 0 0;
+          .testimonial-slide{
+               .comment{
+                    width: 30em;
+                    margin: 5em auto 0 auto;
+                    p{
+                      font-size: 20px;
+                    }
+               }
+               .employee{
+                margin-top: 2.5em;
+                  .depart{
+                  font-size: 16px/1.4em;
+                  font-family: 'Avenir Heavy', sans-serif;
+                  font-weight: 600;
+                  color: $layoutbg;
+                  }
+                  .name{
+                    margin-bottom: 6em;
+                  }
+            }
+          }
+      }
+}
+
+.slick-arrow .next,
+.slick-arrow .prev {
+  position: absolute;
+  top: 50%;
+  font-weight: lighter;
+  color: rgb(65, 65, 65);
+  @include flex(center, center, none);
+  cursor: pointer;
+    &:hover{
+      opacity: 0.5;
+    }
+}
+
+.slick-arrow .next {
+  @include arrow;
+  transform: rotate(45deg);
+  right: 22%;
+}
+
+.slick-arrow .prev {
+  @include arrow;
+  transform: rotate(225deg);
+  left: 22%;
+}
+
+.slick-dots {
+  li.slick-active button:before {
+    opacity: 1 !important;
+    color: transparent !important;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 9px !important;
+    height: 9px !important;
+    margin-top: 2.5px;
+  }
+  
+  li button:before {
+    font-family: 'slick';
+    font-size: 10px !important;
+    opacity: 1 !important;
+    color: black !important;
+    width: 10px !important;
+    height: 10px !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .slick-arrow .next {
+    right: 8%;
+  }
+  
+  .slick-arrow .prev {
+    left: 8%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .slick-arrow .next {
+    right: 2%;
+  }
+  
+  .slick-arrow .prev {
+    left: 2%;
+  }
+}

@@ -1,0 +1,100 @@
+.header-maindiv{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    min-height: 4.3em;
+    background-color: $layoutbg;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 0 6em;
+    transition: 0.5s ease-in-out;
+    z-index: 10;
+    .right-header{
+        display: flex;
+        .right-navigator{
+            display: flex;
+            @include navigator;
+        }
+        .login-bar{
+            display: flex;
+            cursor: pointer;
+            .user-icon{
+                position: relative;
+                top: -3px;
+            }
+            .login-text{
+                margin-left: 0.6em;
+                font-family: 'Avenir Light', sans-serif;
+                color: $white;
+                text-decoration: none;
+                &:hover{
+                    opacity: 0.7; 
+                }
+            }
+        }
+    }
+    .mobile-menu{
+        display: none;
+        color: #ffff;
+        font-size: 2em;
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .header-maindiv{
+        .right-header{
+            opacity: 0;
+            display: flex;
+            justify-content: flex-end;    
+            flex-direction: column-reverse;
+            position: absolute;
+            right: 0;
+            height: 0;
+            width: 25rem;
+            top: -20em;
+            background: $layoutbg;
+            align-items: center;
+            transition: 0.3s ease-in-out; 
+              &.active{
+                position: absolute;
+                min-height: 25em;
+                display: flex;
+                top: 4.3em;
+                opacity: 1; 
+              }
+              .right-navigator{
+                .navigator{
+                    margin-top: 0.5em;
+                    a{
+                        margin: 1em auto;
+                    }
+                    text-align: center;
+                    @include flex(center,space-between,column);
+                }
+               }
+              .login-bar{
+                @include flex(center,center,none);
+                padding: 1em 0;
+                background: lighten($layoutbg, 10%);
+                width: 100%;
+                position: relative;
+            }
+            
+        }
+        .mobile-menu{
+            z-index: 1;
+            position: absolute;
+            display: block;
+            right: 1em;
+        }
+    }   
+}
+@media only screen and (max-width: 640px) {
+    .header-maindiv{
+        padding: 0 1em;
+        .right-header{
+            width: 100%;
+        }
+    }
+} 

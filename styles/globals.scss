@@ -1,0 +1,38 @@
+@import "Home.scss";
+@import "variables.scss";
+@import "function.scss";
+@import "../components/Header/Header.scss";
+@import "../components/Footer/Footer.scss";
+@import "../components/Title.scss";
+@import "../sections/Hero/Hero.scss";
+@import "../sections/About/About.scss";
+@import "../sections/Intro/Intro.scss";
+@import "../sections/Client/Client.scss";
+@import "../sections/Testimonials/Testimonial.scss";
+@import "../sections/Contact/Contact.scss";
+@import "../components/AboutPage/AboutPage.scss";
+@import "../components/ProjectsPage/ProjectsPage.scss";
+@import "../components/ServicesPage/ServicesPage.scss";
+@import "../components/Plan&PricingPage/Plan.scss";
+@import "../components/ToolsAndTips-UI/ToolsAndTips.scss";
+@font-face {
+  font-family: 'Avenir Heavy';
+  src: url('../public/fonts/Avenir Heavy.ttf');
+
+  font-family: 'Avenir Light';
+  src: url('../public/fonts/Avenir Light.ttf');
+}
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth !important;
+  
+}
+
+a{
+  text-decoration: none;
+}
+li{
+  list-style-type: none;
+}

@@ -1,0 +1,111 @@
+$s: 12px;
+$sm: 14px;
+$md: 15px;
+$lg: 16px;
+$xl: 17px;
+$xl-1: 18px;
+$xl-2: 20px;
+$xl-3: 22px;
+$xl-4: 25px;
+$xl-5: 30px;
+$xl-6: 35px;
+$xll: 60px;
+$xll-2: 80px;
+$xll-3: 100px;
+
+$layoutbg: #0C3C60;
+$overlaybg: #072136;
+$bordercardcolor: rgba($color: #000000, $alpha: 0.2);
+$white: #ffffff;
+$dark: #080e10;
+$green: #00dc93;
+$titlecolor: #072136;
+$buttoncolor: #0c3b5f;
+ 
+p{
+  font-family: 'Avenir Light', sans-serif;
+  font-size: 16px;
+}
+.mt{
+  &-10{
+    margin-top : 10px; 
+  }
+  &-20{
+    margin-top : 20px; 
+  }
+  &-30{
+    margin-top : 30px; 
+  }
+  &-40{
+    margin-top : 40px; 
+  }
+  &-50{
+    margin-top : 50px; 
+  }
+  &-60{
+    margin-top : 60px 
+  }
+  &-70{
+    margin-top : 70px 
+  }
+  &-80{
+    margin-top : 80px 
+  }
+}
+.green {
+  color: $green;
+}
+.title {
+  color: $white;
+  font-family: 'Avenir Light', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.hero-button{
+    width: 230px;
+    border: 1px solid black;
+    padding: 16px;
+    font-family: 'Avenir Light', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+        &:hover{
+              background: $layoutbg;
+              color: $white;
+        }
+  }
+
+$shadow-md: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+.w-30 {
+  width: 30%;
+}
+.w-40 {
+  width: 40%;
+}
+.w-50 {
+  width: 50%;
+}
+.w-60 {
+  width: 60%;
+}
+.w-70 {
+  width: 70%;
+}
+.w-80 {
+  width: 80%;
+}
+.round {
+  border-radius: 50px 0 50px 0;
+}
+.ml {
+  margin-left: 50px;
+}
+.mr {
+  margin-left: 50px;
+}
+.py{
+  padding: 5em 0;
+}

@@ -1,0 +1,101 @@
+.plan-page-maindiv{
+  text-align: center;
+   .plan-title{
+       margin-top: 7em;
+       text-align: center;
+   }
+   .plan-main{
+       padding: 0% 5.5%;
+       margin: 5em 0 7em 0;
+       
+       .content{
+            .card{
+                .above-card{
+                    p{
+                      line-height: 40px;
+                      font-size: 14px;
+                    }
+                    border: 1px solid $bordercardcolor;
+                    min-height: 20em;
+                    @include flex(center,none,column);
+                    .ribbon{
+                       position: relative;
+                       font-size: 16px;
+                       color: $white;
+                       @include flex(center,center,none);
+                       width: 6em;
+                       height: 2em;
+                       background: $layoutbg;
+                       top: -15px;
+                       opacity: 0;
+                    }
+                    .card-title{
+                        margin-top: 0em;
+                        font-size: 20px;
+                    }
+                    .card-price{
+                        margin: 30px 0;
+                        font-size: 70px;
+                        @include flex(none,center,none);
+                        span{
+                            font-size: 20px;
+                            position: relative;
+                            top: -32px;
+                         }    
+                    }
+                    .card-description{
+  
+                    }
+                    .card-valid{
+  
+                    }
+                    .card-button{
+                       width: 60%;
+                       border: 1px solid black;
+                       padding: 14px 16px;
+                       margin: 1em 0 2em 0;
+                       font-family: 'Avenir Heavy', sans-serif;
+                       font-weight: bold;
+                       font-size: 16px;
+                       background: $layoutbg;
+                       color: $white;
+                       cursor: pointer;
+                       transition: 0.3s ease-in-out;
+                        &:hover{
+                              opacity: 0.6;
+                        }
+                    }
+                        /*best value cards*/
+                        &.bestvalue{
+                            background-color: rgba(67, 149, 177,0.2);
+                                .ribbon{
+                                    opacity: 1 !important;
+                                }
+                        }
+                }
+                .below-card{
+                  height: 19.5em;
+                  text-align: center;
+                  list-style-type: none;
+                  border-width: 0 1px 1px 1px;
+                  border-style: solid;
+                  border-color: $bordercardcolor;
+                     .benefits{
+                        padding: 1.5em;
+                        margin-left: 5%;
+                        li{
+                           font-family: 'Avenir Light', sans-serif;
+                           font-size: 14px;
+                           margin : 1em 0;
+                           @include flex(center,none,none);
+                             span{
+                                 color: rgb(67, 149, 177);
+                                 margin-right: 0.5em; 
+                             }
+                        }
+                     }
+                }
+            }
+       }
+   }
+}

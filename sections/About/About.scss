@@ -1,0 +1,42 @@
+  #about{
+    background: url("../../public/aboutbg.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 42.5em;
+  
+    &:before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        min-height: 42.5em;
+        background-color: rgb(216,232,242);
+        opacity: 0.9;  /* Adjust the opacity value as needed */
+    }
+    .about-container{
+        @include flex(center,center,column);
+        position: relative;
+        padding-top: 8em;  
+        width: 100%;
+        .description{
+            text-align: center;
+            margin: 0 auto;
+            width: 640px;       
+        } 
+    }
+}
+@media screen and (max-width: 640px) {
+    #about{
+        .about-container{
+            padding-top: 4em; 
+            .description{
+                @include flex(center,center,column);
+                width: 100%; 
+                p{
+                    width: 85%;
+                    text-align: center;
+                }
+            }
+        }    
+}    
+}

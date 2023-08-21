@@ -1,0 +1,61 @@
+.footer-maindiv{
+    background: $overlaybg;
+    min-height: 24em;
+    padding: 0 7.5%;
+    .content{
+        padding-top: 3em;
+        @include flex(none,space-between,none);
+        .footer-title{
+            margin-bottom: 1.2em;
+            a{
+                letter-spacing: 0.05em;
+            }
+        }
+        .address{
+            color:$white;
+            line-height: 1.4em;
+        }
+        .second-col{
+            
+            .footer-navigator{
+                text-align: left;
+                margin-bottom: 0.8em;
+                @include flex(none,none,column);
+                @include navigator;
+                line-height: 2em;
+            }
+        }
+        .third-col{
+            .social-icon{
+                .icon{
+                    color: white;
+                    font-size: 1.2em;
+                    margin-right: 0.5em;
+                }
+            }
+            .legal{
+                margin-top: 3em;
+                .legal-text{
+                    color: white;
+                    font-size: 0.9em;
+                    span{
+                        text-decoration-line: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    .footer-maindiv{
+        .content{
+              @include flex(center,space-between,column);
+                .second-col{
+                   display: none;
+                }
+                .third-col{
+                    margin: 4em 0;
+                }
+        }
+    }
+}

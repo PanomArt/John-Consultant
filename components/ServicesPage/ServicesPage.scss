@@ -1,0 +1,77 @@
+.services-maindiv{
+    margin-top: 10em;
+    width: 100%;
+    .content{
+        @include grid(repeat(2, 1fr),20px);
+        border: 1px solid black;
+        width: 58em;
+        margin: 5em auto;
+        .image{
+            img{
+                width: 100%;
+                height: 100%;
+                background-color: cover;
+            }
+        }
+        .text{
+            margin: 3em 0;
+            .service-title{
+                cursor: pointer;
+                margin-bottom: 0.5em;
+                text-transform: uppercase;
+                font-size: 26px;
+                font-variant: normal;
+                font-weight: normal;
+                font-family: 'Brandon Grotesque Light', sans-serif;
+                transition: 0.3s ease-in-out;
+                &:hover{
+                    color: rgb(161, 188, 206);
+                }
+            }
+            .price{
+                line-height: 1.5em;
+                margin-bottom: 1.2em;
+            }
+            .book-btn{
+                padding: 0.5em 1.3em;
+                border: 1px solid black;
+                background: transparent;
+                font-family: 'Avenir Light', sans-serif;
+                font-size: 16px;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+                &:hover{
+                    color: rgb(149, 166, 204);
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    .services-maindiv{
+        .content{
+            width: 47em;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .services-maindiv{
+        .content{
+            @include flex(center,none,column);
+            width: 60%;
+            .image{
+                img{
+                    height: 17.5em;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .text{
+                padding: 0 1em;
+                .book-btn{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
