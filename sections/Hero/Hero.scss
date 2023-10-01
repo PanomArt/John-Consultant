@@ -56,13 +56,15 @@
 }
 @media screen and (max-width: 640px) {
     #hero{
+        height: 35em;
         .hero-title{
-            width: 80%;
+            width: 90%;
+            height: 230px;
             .title-small{
                 font-size: 18px;
             }
             .title-large{
-                font-size: 40px;
+                font-size: 30px;
             }
         }
     }

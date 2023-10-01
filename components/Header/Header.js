@@ -15,8 +15,8 @@ export default function Header() {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
       const visible = prevScrollPos > currentScrollPos;
-      setPrevScrollPos(currentScrollPos);
       setVisible(visible);
+      setPrevScrollPos(currentScrollPos);
       setMobileActive(false);
     };
     window.addEventListener('scroll', handleScroll);
